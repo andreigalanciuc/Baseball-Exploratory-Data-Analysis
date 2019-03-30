@@ -1,14 +1,10 @@
-# Investigate-a-Dataset
-I am using the Baseball dataset (2016 version) for this project.
-I will mention along the way which datasets specifically I am using.
+# Software Requirements
+```Python 3```
 
-**Questions I will investigate:**
+# Questions I will investigate:
 1) What is the relationship between the doubles and the triples of the players? 
 2) What is the relationship between the winning and losing pitches of the players? 
 3) What are the traits of the players with above average salaries?
 
-**Python**
--histograms
--scatterplots
--correlations
--dataframes
+# Project Summary
+In this project we investigated 3 questions. We looked at several relationships between performance measures of baseball players (doubles, triples, winning and losing pitches). We also investigated the relationship of those variables with the salaries of the players. We had all the available data (i.e. no missing values) and the distributions of all the variables were right-skewed. In all cases, the mean was far from the corresponding maximum values, which indicates the presence of outliers. Outliers can be removed from the dataset. However, for the purposes of this project, we wanted to see the distribution of results including all the datapoints. The batting performance measures (doubles and triples) have a positive correlation of 0.656, while the pitching performance measures (winning and losing pitches) have a positive correlation of 0.74. Both of these correlations are rather strong. However, these are just exploratory statistics. These correlations do not imply any causal effect. To detect a causal effect from the performance of doubles on the performance of triples of players for instance, we would need to run a regression analysis while controlling for intervening variables. In the last set of comparisons, we compared the performance measures of players with salaries above average with players with salaries below average. There is a slight difference in performance measured by 2B. Namely, players with salaries above average had higher 2B scores, on average. There was almost no difference in performance measured by 3B. Note that these are exploratory statistics. To definitely claim that there are significant differences in performance measures (2B or 3B) between the players with salaries above and below average, we should run a statistical test. A t-test on difference between means would be appropriate here. Regarding the pitching performance, players with salaries above average had a higher winning score and losing score, on average. The higher winning pitches score might be due to better performance of the players with salaries above average. And the higher losing pitches score might be due to the fact that those players had more games throughout the year of data collection. And hence they managed to accumulate more losses. Nontheless, to claim any conclusion, we should run a t-test on the difference between means of the two groups. If we conclude that we have a significant difference between the performance measures of the two groups, we can run a regression analysis to see how we can predict the salaries of the players based on these variables. Here we looked only at the relationship of 4 perfromance measures with the salaries. There are definitely more possible relationships, which is something that can be looked up in further research.
